@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Tic-Tac-Toe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script defer charset="utf-8" src="js/app.js"></script>
+    <link rel="stylesheet" href="css/app.css" />
+</head>
+
+<body>
+	<div class="grid-container">
+		<div id="headerBox">
+			<div> 
+				<h1>Tic-Tac-Toe </h1>
+			</div>
+			<div id="scoreBoard"></div>
+			<br>
+			<div id="turnIndicator"></div>
+		</div>
+		<div class="gameGridWrapper">
+			<div class="gameGrid"> 
+				<div id=cell1 class=cell data-index=0> </div>
+				<div id=cell2 class=cell data-index=1> </div>
+				<div id=cell3 class=cell data-index=2> </div>
+				<div id=cell4 class=cell data-index=3> </div>
+				<div id=cell5 class=cell data-index=4> </div>
+				<div id=cell6 class=cell data-index=5> </div>
+				<div id=cell7 class=cell data-index=6> </div>
+				<div id=cell8 class=cell data-index=7> </div>
+				<div id=cell9 class=cell data-index=8> </div>
+			</div>
+		</div>
+	</div>
+    <div class="modal" id="startModal">
+    	<form class="modalContent" id="startContent"> 
+    		<div>
+    			<h1> Input player details </h1>
+    		</div>
+    		<div id="start1"> 
+    			<label for="p1Name"><b>Player 1 Name</b></label> 
+		    	<input type="text" id="p1Name" name="p1Name" required> 
+		    </div>
+
+		    <div id="start2"> 
+    			<label for="p2Name"><b>Player 2 Name</b></label> 
+		    	<input type="text" id="p2Name" name="p2Name" required> 
+		    </div>
+
+		    <div id="start3"> 
+    			<label for="p1Symbol"><b>Player 1 Symbol</b></label>
+    			<div id=p1SymbolChoice>
+	    			<label class="labl">
+			    		<input type="radio" id="p1SymbolX" name="p1Symbol" checked> 
+			    		<div> <h3>X</h3> </div>
+			    	</label>
+			    	<label class="labl">
+			    		<input type="radio" id="p1SymbolO" name="p1Symbol"> 
+			    		<div> <h3>O</h3> </div>
+			    	</label>
+			    </div>
+		    </div>
+
+		    <div id="start4">
+		    	<input type="submit" class="button">
+		    </div>
+    	</form>
+    </div>
+
+    <div class="modal" id="winModal">
+    	<div class="modalContent" id="winContent">
+    		<div id="winMessage"></div>
+    		<div>
+    			<input type="button" id="winCloseButton" class="button" value="Close">
+    		</div>
+    	</div>
+    </div>
+
+    <div class="modal" id="drawModal">
+    	<div class="modalContent" id="drawContent">
+    		<div> 
+    			<h1> GAME OVER! </h1> It's a draw!
+    		</div>
+    		<div>
+    			<input type="button" id="drawCloseButton" class="button" value="Close">
+    		</div>
+    	</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,205 @@
+.grid-container{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 33vh);
+}
+
+
+.gameGridWrapper {
+	display:flex;
+	justify-content: center;
+	align-items: flex-start;
+	grid-column: 2 / 3 ;
+	grid-row: 2 / 3;
+}
+
+.gameGrid{
+	display: grid;
+	grid-template-columns: repeat(3, 17vh);
+	grid-template-rows: repeat(3, 17vh);
+	grid-gap: 1vh;
+}
+
+.gameGrid > div{
+	padding: 5px;
+	border: 1px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #aaa;
+	caret-color:transparent;
+	font-size: 15vh;
+}
+
+.gameGrid >div:hover {
+	background-color: #bbb;
+}
+
+
+.modal {
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modalContent {
+	background-color: white;
+	margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+	margin: 15% auto;
+	caret-color:transparent;
+}
+
+#startModal {
+	display: block; /* Hidden by default */
+}
+
+#startContent {
+	display: flex;
+	flex-direction: column;
+
+}
+
+#startContent > div{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 10px;
+}
+
+#p1SymbolChoice {
+	display: flex;
+}
+
+
+#winModal {
+	display: none; /* Hidden by default */
+}
+
+#winContent {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 1em;
+}
+
+#headerBox {
+	grid-column: 1 / 4;
+	grid-row: 1 / 2;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	caret-color:transparent;
+}
+
+#drawModal {
+	display: none; /* Hidden by default */
+}
+
+#drawContent {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 1em;
+}
+
+.labl {
+    display : block;
+    width: 1em;
+    margin: 1em;
+    caret-color:transparent;
+}
+
+.labl > input{ /* HIDE RADIO */
+    visibility: hidden; /* Makes input not-clickable */
+    position: absolute; /* Remove input from document flow */
+}
+
+.labl > input + div{ /* DIV STYLES */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1em;
+}
+
+.labl > input:checked + div{ /* (RADIO CHECKED) DIV STYLES */
+    background-color: #aaa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div {
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+}
+
+.button{
+  appearance: none;
+  background-color: #FAFBFC;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+  box-sizing: border-box;
+  color: #24292E;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  padding: 6px 16px;
+  position: relative;
+  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  word-wrap: break-word;
+}
+
+.button:hover {
+  background-color: #F3F4F6;
+  text-decoration: none;
+  transition-duration: 0.1s;
+}
+
+.button:disabled {
+  background-color: #FAFBFC;
+  border-color: rgba(27, 31, 35, 0.15);
+  color: #959DA5;
+  cursor: default;
+}
+
+.button:active {
+  background-color: #EDEFF2;
+  box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+  transition: none 0s;
+}
+
+.button:focus {
+  outline: 1px transparent;
+}
+
+.button:before {
+  display: none;
+}
+
+.button:-webkit-details-marker {
+  display: none;
+}
